@@ -1,0 +1,55 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#carter{
+    border: 2px solid;
+    border-radius: 5px;
+    min-width: 20rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.title{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding-top: 0rem;
+}
+
+.body{  
+    padding-left: 2rem;
+}
+
+h3{
+    margin-bottom: 0%;
+}
+
+input{
+    margin-bottom: 0.5rem;
+}
+
+select{
+    margin-bottom: 0.5rem;
+}
+
+.foot{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 5rem;
+}
+
+.cont-in{
+    padding: 0.5rem;
+}
+
+.foot input{    
+    margin-top: 1.5rem;
+}
