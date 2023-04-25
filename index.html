@@ -15,13 +15,13 @@
             </div>
             <div class="body">
                 <h3>Email:</h3>
-                <input type="email">
+                <input type="email" id="email_in">
                 <h3>Nombre completo:</h3>
-                <input type="text">
+                <input type="text" id="nombre_completo_in" onblur="validateState()">
                 <h3>Fecha de nacimiento:</h3>
-                <input type="date">
+                <input type="date" id="fecha_na_in">
                 <h3>Sexo:</h3>
-                <select name="select" id="select">
+                <select name="select" id="select_in">
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                 </select>
@@ -37,11 +37,11 @@
     
             </div>
             <div class="foot">
-                <input type="submit" value="Registrar">
+                <input type="submit" value="Registrar" onclick="getDataForm()">
             </div>
         </div>
         
     </div>
-    
+    <script src="app.js"></script>
 </body>
 </html>
