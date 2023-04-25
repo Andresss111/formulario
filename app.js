@@ -52,8 +52,8 @@ function getDataForm(){
     console.log(datosFormulario)
 }
 
-function validateState(){
-    const name=document.getElementById('nombre_completo_in')
+function validateState(id){
+    const name=document.getElementById(id)
     if(name.value == ''){
         name.setAttribute('style','border-color:red')
     }else{
