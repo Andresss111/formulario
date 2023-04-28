@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="app.js"></script>
 </head>
 <body>
     <div id="container">
@@ -15,33 +16,33 @@
             </div>
             <div class="body">
                 <h3>Email:</h3>
-                <input type="email" id="email_in" onblur="validateState(id)">
+                <input type="email" id="email_in" onblur="validateState(this)">
                 <h3>Nombre completo:</h3>
-                <input type="text" id="nombre_completo_in" onblur="validateState(id)">
+                <input type="text" id="nombre_completo_in" onblur="validateState(this)">
                 <h3>Fecha de nacimiento:</h3>
-                <input type="date" id="fecha_na_in" onblur="validateState(id)">
+                <input type="date" id="fecha_na_in" onblur="validateState(this)">
                 <h3>Sexo:</h3>
-                <select name="select" id="select_in" onblur="validateState(id)">
+                <select name="select" id="select_in" onblur="validateState(this)">
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                 </select>
                 <h3>Intereses</h3>
                 <div class="cont-in">
-                    <input type="checkbox" name="Computers" id="Computers" value="Computers"><label for="Computers">Computers</label><br>
-                    <input type="checkbox" name="Sports" id="Sports" value="Sports"><label for="Sports">Sports</label><br>
-                    <input type="checkbox" name="Games" id="Games" value="Games"><label for="Games">Games</label><br>
-                    <input type="checkbox" name="Music" id="Music" value="Music"><label for="Music">Music</label><br>
+                    <input type="checkbox" name="Computers" id="Interests" value="Computers"><label for="Computers">Computers</label><br>
+                    <input type="checkbox" name="Sports" id="Interests" value="Sports"><label for="Sports">Sports</label><br>
+                    <input type="checkbox" name="Games" id="Interests" value="Games"><label for="Games">Games</label><br>
+                    <input type="checkbox" name="Music" id="Interests" value="Music"><label for="Music">Music</label><br>
                 </div>
                 
                 
     
             </div>
             <div class="foot">
-                <input type="submit" value="Registrar" onclick="getDataForm()">
+                <input type="submit" value="Registrar" onclick="register()">
             </div>
         </div>
         
     </div>
-    <script src="app.js"></script>
+    
 </body>
 </html>

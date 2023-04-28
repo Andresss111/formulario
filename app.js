@@ -9,9 +9,9 @@ function getDataForm(){
     let email=document.getElementById('email_in')
 
     if(email.value == ''){
-        alert('El campo nombre es obligatorio')
+        alert('El campo email es obligatorio')
         email.setAttribute('style', 'border-color:red')
-        email.setAttribute('placeholder','Escriba aqui el nombre')
+        email.setAttribute('placeholder','Escriba aqui el email')
         return
     }
 
@@ -27,18 +27,18 @@ function getDataForm(){
     let date_born=document.getElementById('fecha_na_in')
 
     if(date_born.value == ''){
-        alert('El campo nombre es obligatorio')
+        alert('El campo fecha es obligatorio')
         date_born.setAttribute('style', 'border-color:red')
-        date_born.setAttribute('placeholder','Escriba aqui el nombre')
+        date_born.setAttribute('placeholder','Escriba aqui el fecha')
         return
     }
 
     let sexo=document.getElementById('select_in')
 
     if(sexo.value == ''){
-        alert('El campo nombre es obligatorio')
+        alert('El campo sexo es obligatorio')
         sexo.setAttribute('style', 'border-color:red')
-        sexo.setAttribute('placeholder','Escriba aqui el nombre')
+        sexo.setAttribute('placeholder','Escriba aqui el sexo')
         return
     }
         
@@ -52,11 +52,27 @@ function getDataForm(){
     console.log(datosFormulario)
 }
 
-function validateState(id){
-    const name=document.getElementById(id)
-    if(name.value == ''){
-        name.setAttribute('style','border-color:red')
+function validateState(element){
+    if(element.value == ''){
+        element.setAttribute('style','border-color:red')
     }else{
-        name.setAttribute('style','border-color:black')
+        element.removeAttribute('style')
+    }
+}
+
+function validateInterests(){
+    const Interests=document.querySelectorAll('#Interests')
+    
+    for(let i=0; i<Interests.length;i++){
+        if(Interests[i].checked){
+            return true
+        }
+    }
+    return false
+}
+
+function register(){
+    if (!validateInterests()){
+        alert('Debe seleccionar por lo menos un interes')
     }
 }
