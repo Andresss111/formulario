@@ -6,10 +6,9 @@ function validateState(element){
     }
 }
 
-function validateInputs(id,msg){
+function validateInputs(id){
     const ob=document.getElementById(id)
     if(ob.value == ''){
-        alert('Debe ingresar ' + msg)
         ob.setAttribute('style','border-color:red')
         return false
     }
@@ -31,12 +30,17 @@ function validateInterests(){
 }
 
 function register(){
-    if(!validateInputs('email_in','un correo electronico')){return}
-    if(!validateInputs('nombre_completo_in','un nombre')){return}
-    if(!validateInputs('fecha_na_in','una fecha')){return}
+    let errors=[]
+    if(!validateInputs('email_in')){errors.push('Debe agregar un email')}
+    if(!validateInputs('nombre_completo_in')){errors.push('Debe agregar un nombre')}
+    if(!validateInputs('fecha_na_in')){errors.push('Debe agregar una fecha de nacimiento')}
 
     if (!validateInterests()){
-        alert('Debe seleccionar por lo menos un interes')
+        errors.push('Debe seleccionar por lo menos un interes')
+    }
+
+    if(errors.length>0){
+        showErrors(errors)
         return
     }
 
@@ -65,4 +69,13 @@ function GetValueArray(id){
         }
     }
     return array
+}
+
+function showErrors(errors){
+    let messageError='Se encontraron los siguientes errores en el formulario \n'
+    for(let i=0;i<errors.length;i++){
+        messageError=messageError + '\n'+ (i+1) + '. ' + errors[i]
+    }
+    alert(messageError)
+    console.log(errors)
 }
