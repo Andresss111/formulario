@@ -53,6 +53,7 @@ function register(){
     }
 
     console.log(request)
+    alert('Usted se ha registrado satisfactoriamente')
 }
 
 function GetValue(id){
@@ -74,7 +75,7 @@ function GetValueArray(id){
 function showErrors(errors){
     let messageError='Se encontraron los siguientes errores en el formulario \n'
     for(let i=0;i<errors.length;i++){
-        messageError=messageError + '\n'+ (i+1) + '. ' + errors[i]
+        messageError += '\n'+ (i+1) + '. ' + errors[i]
     }
     alert(messageError)
     console.log(errors)
