@@ -1,3 +1,8 @@
+body{
+    background-color: rgb(10, 16, 48);
+    color:rgb(220, 223, 224);
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -48,8 +53,10 @@ select{
 
 .cont-in{
     padding: 0.5rem;
+    width: 6rem;
 }
 
 .foot input{    
     margin-top: 1.5rem;
 }
+
