@@ -53,7 +53,21 @@ function register(){
     }
 
     console.log(request)
+    users.push(request)
+    console.log("Lista de usuarios:",users)
+    
+    fetch('http://localhost/api-php/',{
+            method: 'POST', body: JSON.stringify(request)
+        })
+        .then(response => result = response.json())
+        .then(data => {
+            phpUsers = data
+            console.log(phpUsers)
+        })
+        .catch(error => console.log(error))
+
     alert('Usted se ha registrado satisfactoriamente')
+    showListUsers(request)
 }
 
 function GetValue(id){
@@ -79,4 +93,22 @@ function showErrors(errors){
     }
     alert(messageError)
     console.log(errors)
+}
+
+function showListUsers(request){
+    const table = document.getElementById('table-users')
+    const row = document.createElement('tr')
+
+    for(let prop in request){
+        if(prop == 'interests'){break}
+        const col = document.createElement('td')
+        if(prop == 'sexo'){
+            col.innerHTML = request[prop] == 1 ? 'Varón' : 'Mujer'
+        }else{
+            col.innerHTML = request[prop]
+        }
+        row.appendChild(col)
+    }
+
+    table.appendChild(row)
 }

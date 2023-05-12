@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="app.js"></script>
+    <script src="list.js"></script>
 </head>
 <body>
     <div id="container">
@@ -42,7 +43,23 @@
                 <input type="submit" value="Registrar" onclick="register()">
             </div>
         </div>
-        
+        <div>
+            <h1>Lista de usuarios registrados</h1>
+            <table id="table-users" class="table">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Correo</td>
+                    <td>Fecha de nacimiento</td>
+                    <td>Género</td>
+                </tr>
+                <tr>
+                    <td>Peter Parker</td>
+                    <td>spiderman@gmail.com</td>
+                    <td>2000-11-11</td>
+                    <td>Varón</td>
+                </tr>
+            </table>
+        </div>
     </div>
     
 </body>
