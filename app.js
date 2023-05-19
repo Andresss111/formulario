@@ -45,8 +45,8 @@ function register(){
     }
 
     const request={
-        email: GetValue('email_in'),
         name: GetValue('nombre_completo_in'),
+        email: GetValue('email_in'),
         date_born: GetValue('fecha_na_in'),
         sexo: GetValue('select_in'),
         interests: GetValueArray('Interests')

@@ -1,0 +1,32 @@
+.containerUp{
+    display: flex;
+    flex-direction: column;
+    min-width: 25em;
+    
+}
+
+.containerUp h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputsUp{
+    display: flex;
+    flex-direction: column; 
+}
+
+.footUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.footUp button{
+    margin: 0.5em;
+}
+
+button{
+    margin-left: 1em;
+}
